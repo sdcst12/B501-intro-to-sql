@@ -6,8 +6,12 @@ connection = sqlite3.connect(file)
 print(connection)
 
 cursor = connection.cursor()
+
 cursor.execute('delete from customers') 
-#note, you don't want to delete the table data regularly, this is just for demo purposes
+# note, you don't want to delete the table data regularly, 
+# this is just for demo purposes do we don't end up with
+# duplicate records every time we run this program
+
 data = [
     ['Joe Mantenga','joe@sdss.ca',12345],
     ['Hanna Montana','miley@cyrus.com',32],
